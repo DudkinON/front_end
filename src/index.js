@@ -7,10 +7,10 @@ import { Router, Route, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import thunk from 'redux-thunk';
 import reducer from './reducers';
-import './index.css';
 import Main from './components/Main';
 import registerServiceWorker from './registerServiceWorker';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 
 const store = createStore(reducer, compose(applyMiddleware(thunk)));
 const history = syncHistoryWithStore(browserHistory, store);
